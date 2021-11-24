@@ -11,3 +11,8 @@
       <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
   </footer>
+
+  <!--- initiate animate on scrol library -->
+  <script>
+  AOS.init();
+</script>
