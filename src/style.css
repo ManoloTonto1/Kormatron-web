@@ -87,7 +87,7 @@ body {
     background-color: var(--secondary-bg-color);
 }
 .active-tab {
-    color: #009688;
+    color: var(--text-color);
 }
 
 .modal-input {
