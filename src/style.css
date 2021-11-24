@@ -1,0 +1,160 @@
+*{
+    font-family: "Raleway", sans-serif
+}
+:root {
+    --primary-bg-color: #2f3241;
+    --secondary-bg-color: #252833;
+    --third-bg-color: #424555;
+    --text-color: #009688;
+    --text-color-hover: #03bba8;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: #fff;
+}
+
+
+.logo{
+    width: 8em;
+}
+
+.navbar-btn {
+    width: 100%;
+    display: block;
+    padding: 1em 1em;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    text-decoration: none;
+    transition: background-color 500ms, color 100ms, padding-left 300ms, transform 100ms, border-radius 100ms;
+    transition-timing-function: ease-in-out;
+}
+
+.navbar-btn:hover {
+    background-color: var(--third-bg-color);
+    padding-left: 2.5em;
+
+}
+
+.navbar-btn:active {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color-hover);
+    transform: scale(0.9);
+    border-radius: 5%;
+
+}
+.navbar-icon {
+    width: auto;
+    display: block;
+    text-align: center;
+    border: none;
+    white-space: normal;
+    padding: .75em 1em;
+    float: left;
+    outline: 0;
+    text-decoration: none;
+    transition: background-color 500ms, color 100ms, padding-left 300ms, transform 100ms;
+    transition-timing-function: ease-in-out;
+    border-radius: 50%;
+}
+.navbar-icon:hover {
+    background-color: var(--third-bg-color);
+
+}
+
+.navbar-icon:active {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color-hover);
+    transform: scale(0.9);
+
+
+}
+.sidebar{
+    z-index: 3;
+    height: 100%;
+    width: 200px;
+    background-color: var(--secondary-bg-color);
+    position: fixed !important;
+    overflow: auto;
+    position: fixed;
+}
+
+.sidebar-container {
+    padding: 0.01em 1em;
+    background-color: var(--secondary-bg-color);
+}
+.active-tab {
+    color: #009688;
+}
+
+.modal-input {
+    color: whitesmoke;
+    width: 100%;
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 1px solid;
+    margin-bottom: 1em;
+    transition: 600ms;
+    border-color: transparent;
+    outline: none;
+    background-color: var(--third-bg-color);
+}
+
+.modal-input-short {
+    color: whitesmoke;
+    width: 49%;
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 1px solid;
+    margin-bottom: 1em;
+    transition: 600ms;
+    border-color: transparent;
+    outline: none;
+    background-color: var(--third-bg-color);
+}
+
+.modal-input:focus,
+.modal-input-short:focus {
+    border-color: var(--text-color-hover);
+}
+
+.modal-input:active,
+.modal-input-short:active {
+    border-color: var(--text-color);
+    background-color: var(--primary-bg-color);
+    transform: scale(0.96);
+}
+
+.modal-body {
+    padding: 1em;
+}
+
+.modal-btn {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: .5em;
+    border: 1px solid var(--secondary-bg-color);
+    padding: .75em .5em;
+    transition: 100ms;
+    margin-top: 1em;
+}
+
+.modal-btn:hover {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color-hover);
+
+}
+
+.modal-btn:active {
+    background-color: var(--third-bg-color);
+    color: var(--text-color-hover);
+    transform: scale(0.9);
+}
+
+.modal-btn-right {
+    float: right;
+}
