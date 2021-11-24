@@ -1,7 +1,7 @@
 <!-- import the page header -->
 <?php include('src/header.html') ?>
 
-<body >
+<body>
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
@@ -19,7 +19,10 @@
   <header class="w3-container" style="padding-top:22px">
     <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
   </header>
-
+<?php include('src/settings.php');
+      include('src/user.php');
+      include('src/notifications.php');
+?>
 
 <!-- Footer -->
 <?php include 'src/footer.php'; ?>
@@ -28,5 +31,7 @@
 
 </body>
 </html>
+
+
 
 
