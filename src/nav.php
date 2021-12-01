@@ -5,7 +5,7 @@
       <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
-      <span>Welcome, <strong>Mike</strong></span><br>
+      <span>Welcome, <strong><?php echo($_SESSION[Name]);?></strong></span><br>
       <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon"><i class="fa fa-envelope"></i></a>
       <a href="#" data-izimodal-open="#modal-user" class="navbar-icon"><i class="fa fa-user"></i></a>
       <a href="#" data-izimodal-open="#modal-settings" class="navbar-icon"><i class="fa fa-cog"></i></a>
