@@ -12,6 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "izimodal": "^1.5.1",
+    "izitoast": "^1.4.0",
     "jquery": "^3.6.0",
     "swup": "^2.0.14"
   }
