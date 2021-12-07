@@ -13,6 +13,7 @@ body {
     background-color: var(--primary-bg-color);
     color: #fff;
 }
+.pointer {cursor: pointer;}
 
 
 .logo{
@@ -80,7 +81,12 @@ body {
     position: fixed !important;
     overflow: auto;
     position: fixed;
+    animation: mymove .5s;
 }
+@keyframes mymove {
+    from {left: -300px;}
+    to {left: 0px;}
+  }
 
 .sidebar-container {
     padding: 0.01em 1em;
@@ -156,5 +162,25 @@ body {
 }
 
 .modal-btn-right {
+    margin-left: 1em;
     float: right;
+}
+.modal-label{
+    margin-left: 1em;
+    margin-bottom: .25em;
+    font-weight: bolder;
+    
+}
+.password-container{
+    display: none;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+.table-div{
+    width:100%;
+    padding: 2em
 }

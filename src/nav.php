@@ -1,12 +1,12 @@
 <!-- Sidebar/menu -->
-<nav class=" sidebar w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="sidebar" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
       <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
 
-      <span>Welcome, <strong><?php //;?></strong></span><br>
+      <span><?php echo $lang['welcome']?>, <strong><?php //;?></strong></span><br>
 
       <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon"><i class="fa fa-envelope"></i></a>
       <a href="#" data-izimodal-open="#modal-user" class="navbar-icon"><i class="fa fa-user"></i></a>
@@ -37,3 +37,4 @@
 
   });
   </script>
+  <script src="src/nav.js" type="text/javascript"></script>

@@ -1,5 +1,31 @@
 <?php
-// place all the language specific elements of the language file in this section
-$lang['menu'] = 'Menu';
-$lang['notifications'] = 'Notifications';
+$lang = array(
+    'name' => 'Name',
+    'last_name' => 'Last Name',
+    'position' => 'Position',
+    'save' => 'Save',
+    'menu' => 'Menu',
+    'login' => 'Login',
+    'logout' => 'Logout',
+    'password' => 'Password',
+    'new_password' => 'New Password',
+    'change_password' => 'Change Password',
+    'preferences' => 'User Preferences',
+    'admin' => 'Admin',
+    'info' => 'Info',
+    'help' => 'Help',
+    'logged_in_as' => 'Logged in as',
+    'view' => 'View',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'description' => 'Description',
+    'notifications' => 'notiiications',
+    'welcome' => 'Welcome',
+    'toilets' => 'Toilets',
+    'toilet_view' => 'View',
+    'toilet_floor' => 'Floor',
+    'toilet_type' => 'Type',
+    'toilet_status' => 'Status',
+    'toilet_location' => 'Location',
+);
 ?>

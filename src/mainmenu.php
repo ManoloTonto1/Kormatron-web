@@ -1,5 +1,6 @@
 <!-- import the page header -->
 <?php include('src/header.html') ?>
+<?php include('src/lang/english.php') ?>
 
 <body>
 
@@ -23,6 +24,14 @@
       include('src/user.php');
       include('src/notifications.php');
 ?>
+
+<!--body-->
+<div class="table-div">
+<?php include('src/table.php') ?>
+</div>
+
+
+
 
 <!-- Footer -->
 <?php include 'src/footer.php'; ?>
