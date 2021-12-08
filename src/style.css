@@ -67,6 +67,37 @@ body {
     border-radius: 50%;
     font-size: 20px;
 }
+.icon{
+    width: auto;
+    display: block;
+    text-align: center;
+    border: none;
+    white-space: normal;
+    padding: .75em 1em;
+    float: left;
+    outline: 0;
+    text-decoration: none;
+    transition: background-color 300ms, color 100ms, padding-left 300ms, transform 100ms;
+    transition-timing-function: ease-in-out;
+    border-radius: 50%;
+    font-size: 14px;
+    float: left;
+    display: none;
+    margin: 2px
+    
+}
+.notif{
+    display: block;
+}
+@media(max-width: 996px) {
+    .icon{
+        display: block;
+      }
+    .notif{
+        display: none;
+    }
+
+    }
 .margin-top{
     margin-top: 1em;
 }
@@ -75,12 +106,12 @@ body {
     padding-right: 1px;
 
 }
-.navbar-icon:hover {
+.navbar-icon:hover,.icon:hover {
     background-color: var(--third-bg-color);
 
 }
 
-.navbar-icon:active {
+.navbar-icon:active,.icon:active {
     background-color: var(--secondary-bg-color);
     color: var(--text-color-hover);
     transform: scale(0.9);

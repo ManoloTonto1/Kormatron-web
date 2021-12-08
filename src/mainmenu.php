@@ -7,6 +7,7 @@
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="open_nav();"><i class="fa fa-bars"></i>  Menu</button>
+  <a href="#" data-izimodal-open="#modal-notifications"class="icon"><i class="fas fa-bell"></i></a>
   <span class="w3-bar-item w3-right"><img class="logo"src="src/img/logo.png" alt="logo"></span>
 </div>
 
