@@ -7,11 +7,15 @@
     --third-bg-color: #424555;
     --text-color: #009688;
     --text-color-hover: #03bba8;
+    --margin: 6em;
 }
 
 body {
     background-color: var(--primary-bg-color);
     color: #fff;
+}
+.main{
+    margin-left:var(--margin);
 }
 .pointer {cursor: pointer;}
 
@@ -21,6 +25,7 @@ body {
 }
 
 .navbar-btn {
+
     width: 100%;
     display: block;
     padding: 1em 1em;
@@ -57,9 +62,18 @@ body {
     float: left;
     outline: 0;
     text-decoration: none;
-    transition: background-color 500ms, color 100ms, padding-left 300ms, transform 100ms;
+    transition: background-color 300ms, color 100ms, padding-left 300ms, transform 100ms;
     transition-timing-function: ease-in-out;
     border-radius: 50%;
+    font-size: 20px;
+}
+.margin-top{
+    margin-top: 1em;
+}
+.navbar-icon-container{
+    padding-left: 1em;
+    padding-right: 1px;
+
 }
 .navbar-icon:hover {
     background-color: var(--third-bg-color);
@@ -76,15 +90,18 @@ body {
 .sidebar{
     z-index: 3;
     height: 100%;
-    width: 200px;
+    width: var(--margin);
     background-color: var(--secondary-bg-color);
     position: fixed !important;
     overflow: auto;
     position: fixed;
     animation: mymove .5s;
 }
+.sidebar-tooltip{
+
+}
 @keyframes mymove {
-    from {left: -300px;}
+    from {left: -100px;}
     to {left: 0px;}
   }
 

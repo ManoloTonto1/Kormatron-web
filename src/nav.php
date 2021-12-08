@@ -1,28 +1,18 @@
 <!-- Sidebar/menu -->
-<nav class="sidebar" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container w3-row">
-    <div class="w3-col s4">
-      <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
-    </div>
-    <div class="w3-col s8 w3-bar">
+<nav class="sidebar" style="z-index:3;" id="mySidebar"><br>
+  <div class="navbar-icon-container">
+  <div>
+  <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon"><i class="fa fa-envelope"></i></a>
+  <span class="sidebar-tooltip"></span>
+  </div>
 
-      <span><?php echo $lang['welcome']?>, <strong><?php //;?></strong></span><br>
+      <a href="#" data-izimodal-open="#modal-user" class="navbar-icon margin-top"><i class="fa fa-user"></i></a>
+      <a href="#" data-izimodal-open="#modal-settings" class="navbar-icon margin-top"><i class="fa fa-cog"></i></a>
 
-      <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon"><i class="fa fa-envelope"></i></a>
-      <a href="#" data-izimodal-open="#modal-user" class="navbar-icon"><i class="fa fa-user"></i></a>
-      <a href="#" data-izimodal-open="#modal-settings" class="navbar-icon"><i class="fa fa-cog"></i></a>
-    </div>
   </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Dashboard</h5>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="close_nav()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="#" class="navbar-btn"><i class="fa fa-users fa-fw"></i>  Overview</a>
-    <a href="#" class="navbar-btn"><i class="fa fa-eye fa-fw"></i>  Views</a>
-    <a href="#" class="navbar-btn"><i class="fa fa-users fa-fw"></i>  Traffic</a>
-  </div>
+
+
+
 </nav>
 
 
