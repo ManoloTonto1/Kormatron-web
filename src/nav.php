@@ -2,7 +2,7 @@
 <nav class="sidebar" style="z-index:3;" id="mySidebar"><br>
   <div class="navbar-icon-container">
   <div>
-  <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon notif"><i class="fas fa-bell"></i></a>
+  <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon notif"><i class="fas fa-clipboard-list"></i></a>
   <span class="sidebar-tooltip"></span>
   </div>
 

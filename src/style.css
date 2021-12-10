@@ -5,8 +5,8 @@
     --primary-bg-color: #2f3241;
     --secondary-bg-color: #252833;
     --third-bg-color: #424555;
-    --text-color: #009688;
-    --text-color-hover: #03bba8;
+    --text-color: #005f96;
+    --text-color-hover: #0377bb;
     --margin: 6em;
 }
 
@@ -226,9 +226,57 @@ body {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid #ddd;
+
 }
 .table-div{
     width:100%;
     padding: 2em
+}
+.table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--text-color);
+    color: white;
+}
+.table-top{
+    border-radius: 100px 100px 0px 0px;
+}
+.table td, .table th {
+    border: 1px solid var(--third-bg-color);
+    padding: 8px;
+  }
+
+.table tr:nth-child(even){
+    transition: 100ms;
+    background-color:var(--third-bg-color);
+}
+
+.table tr:hover {
+    background-color:var(--secondary-bg-color);
+}
+.product-module-icon{
+    background-color: transparent;
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 50%;
+    border: none;
+    transition: 100ms;
+
+}
+.product-module-icon:hover {
+    color: var(--text-color-hover);
+
+    text-decoration: none;
+}
+
+.product-module-icon:active {
+    color: var(--text-color);
+    text-decoration: none;
+    transform: scale(0.9);
+}
+.bold{
+    font-weight: bolder;
 }
