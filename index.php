@@ -6,7 +6,7 @@
     <img src="" alt="" class="">
   </div>
 
-  <div class="boktor">
+  <div class="uname-password">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="bokkie" required>
 

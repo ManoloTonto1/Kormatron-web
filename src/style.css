@@ -297,6 +297,10 @@ body {
     font-weight: bolder;
 }
 
-.boktor {
-    background-color: beige;
+.uname-password {
+    background-color: chartreuse;
+}
+
+.container {
+    background: chartreuse;
 }
