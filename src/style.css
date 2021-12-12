@@ -298,9 +298,5 @@ body {
 }
 
 .uname-password {
-    background-color: chartreuse;
-}
-
-.container {
-    background: chartreuse;
+    color: chartreuse;
 }
