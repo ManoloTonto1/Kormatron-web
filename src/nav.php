@@ -3,11 +3,14 @@
   <div class="navbar-icon-container">
   <div>
   <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon notif"><i class="fas fa-clipboard-list"></i></a>
+  <span class="tooltip-txt"><?php echo $lang['todo']?></span>
   <span class="sidebar-tooltip"></span>
   </div>
 
       <a href="#" data-izimodal-open="#modal-user" class="navbar-icon margin-top"><i class="fa fa-user"></i></a>
+      <span class="tooltip-txt"><?php echo $lang['user']?></span>
       <a href="#" data-izimodal-open="#modal-settings" class="navbar-icon margin-top"><i class="fa fa-cog"></i></a>
+      <span class="tooltip-txt"><?php echo $lang['settings']?></span>
 
   </div>
 

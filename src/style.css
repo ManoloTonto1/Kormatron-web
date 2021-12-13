@@ -280,3 +280,7 @@ body {
 .bold{
     font-weight: bolder;
 }
+.tooltip-txt{
+    text-align: center;
+   padding-left: 0.5rem;
+}

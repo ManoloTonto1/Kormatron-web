@@ -22,13 +22,12 @@
     WHERE toilet_id='$id' AND worker_id IS NULL;
     ";
     if ($conn->query($query) === TRUE) {
-      echo "Record updated successfully";
+      //echo "Record updated successfully";
+      echo json_encode(array('success'=>'true'));
     } else {
-      echo "Error updating record: " . $conn->error;
+      //echo "Error updating record: " . $conn->error;
+      echo json_encode(array('success'=>'false'));
     }
 
     echo $id;
     $conn->close();
-  
-
-?>
