@@ -1,6 +1,7 @@
-*{
+* {
     font-family: "Raleway", sans-serif
 }
+
 :root {
     --primary-bg-color: #2f3241;
     --secondary-bg-color: #252833;
@@ -14,18 +15,20 @@ body {
     background-color: var(--primary-bg-color);
     color: #fff;
 }
-.main{
-    margin-left:var(--margin);
+
+.main {
+    margin-left: var(--margin);
 }
-.pointer {cursor: pointer;}
 
+.pointer {
+    cursor: pointer;
+}
 
-.logo{
+.logo {
     width: 8em;
 }
 
 .navbar-btn {
-
     width: 100%;
     display: block;
     padding: 1em 1em;
@@ -42,7 +45,6 @@ body {
 .navbar-btn:hover {
     background-color: var(--third-bg-color);
     padding-left: 2.5em;
-
 }
 
 .navbar-btn:active {
@@ -50,8 +52,8 @@ body {
     color: var(--text-color-hover);
     transform: scale(0.9);
     border-radius: 5%;
-
 }
+
 .navbar-icon {
     width: auto;
     display: block;
@@ -67,7 +69,8 @@ body {
     border-radius: 50%;
     font-size: 20px;
 }
-.icon{
+
+.icon {
     width: auto;
     display: block;
     text-align: center;
@@ -84,41 +87,44 @@ body {
     float: left;
     display: none;
     margin: 2px
-    
 }
-.notif{
+
+.notif {
     display: block;
 }
+
 @media(max-width: 996px) {
-    .icon{
+    .icon {
         display: block;
-      }
-    .notif{
+    }
+
+    .notif {
         display: none;
     }
+}
 
-    }
-.margin-top{
+.margin-top {
     margin-top: 1em;
 }
-.navbar-icon-container{
+
+.navbar-icon-container {
     padding-left: 1em;
     padding-right: 1px;
-
 }
-.navbar-icon:hover,.icon:hover {
+
+.navbar-icon:hover,
+.icon:hover {
     background-color: var(--third-bg-color);
-
 }
 
-.navbar-icon:active,.icon:active {
+.navbar-icon:active,
+.icon:active {
     background-color: var(--secondary-bg-color);
     color: var(--text-color-hover);
     transform: scale(0.9);
-
-
 }
-.sidebar{
+
+.sidebar {
     z-index: 3;
     height: 100%;
     width: var(--margin);
@@ -128,18 +134,24 @@ body {
     position: fixed;
     animation: mymove .5s;
 }
-.sidebar-tooltip{
 
-}
+.sidebar-tooltip {}
+
 @keyframes mymove {
-    from {left: -100px;}
-    to {left: 0px;}
-  }
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
 
 .sidebar-container {
     padding: 0.01em 1em;
     background-color: var(--secondary-bg-color);
 }
+
 .active-tab {
     color: var(--text-color);
 }
@@ -200,7 +212,6 @@ body {
 .modal-btn:hover {
     background-color: var(--secondary-bg-color);
     color: var(--text-color-hover);
-
 }
 
 .modal-btn:active {
@@ -213,49 +224,56 @@ body {
     margin-left: 1em;
     float: right;
 }
-.modal-label{
+
+.modal-label {
     margin-left: 1em;
     margin-bottom: .25em;
     font-weight: bolder;
-    
 }
-.password-container{
+
+.password-container {
     display: none;
 }
-.table{
+
+.table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-
 }
-.table-div{
-    width:100%;
+
+.table-div {
+    width: 100%;
     padding: 2em
 }
-.table th{
+
+.table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: var(--text-color);
     color: white;
 }
-.table-top{
+
+.table-top {
     border-radius: 100px 100px 0px 0px;
 }
-.table td, .table th {
+
+.table td,
+.table th {
     border: 1px solid var(--third-bg-color);
     padding: 8px;
-  }
+}
 
-.table tr:nth-child(even){
+.table tr:nth-child(even) {
     transition: 100ms;
-    background-color:var(--third-bg-color);
+    background-color: var(--third-bg-color);
 }
 
 .table tr:hover {
-    background-color:var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color);
 }
-.product-module-icon{
+
+.product-module-icon {
     background-color: transparent;
     text-decoration: none;
     color: #fff;
@@ -264,11 +282,10 @@ body {
     border-radius: 50%;
     border: none;
     transition: 100ms;
-
 }
+
 .product-module-icon:hover {
     color: var(--text-color-hover);
-
     text-decoration: none;
 }
 
@@ -277,10 +294,17 @@ body {
     text-decoration: none;
     transform: scale(0.9);
 }
-.bold{
+
+.bold {
     font-weight: bolder;
 }
-.tooltip-txt{
+
+.tooltip-txt {
     text-align: center;
-   padding-left: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.uname-password {
+    color: chartreuse;
+
 }
