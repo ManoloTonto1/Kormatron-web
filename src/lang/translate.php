@@ -5,7 +5,7 @@
 function change_type($cause){
 
 
-        include('src/lang/english.php');
+        include('lang/english.php');
     
     
     switch($cause){
@@ -51,7 +51,7 @@ function change_type_reload($cause){
 function change_floor($cause){
 
 
-    include('src/lang/english.php');
+    include('lang/english.php');
 
 
 switch($cause){
@@ -140,7 +140,7 @@ default:
 function change_status($cause){
 
 
-    include('src/lang/english.php');
+    include('lang/english.php');
 
 
 switch($cause){

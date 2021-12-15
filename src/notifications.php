@@ -1,7 +1,7 @@
     <!-- Modal structure -->
-    <?php include('src/db/connectdb.php') ?>  
-    <?php include('src/db/scripts.php') ?>
-    <?php include('src/lang/translate.php') ?>
+    <?php include('db/connectdb.php') ?>  
+    <?php include('db/scripts.php') ?>
+    <?php include('lang/translate.php') ?>
 
     <h3><?php echo $lang['toilets'] ?> </h3>
 	<table id="toilet_table" class="table">
@@ -45,10 +45,10 @@
       <div id="modal-input-container">
 
                     <span class="bold"><?php echo $lang['toilet_floor'].": ";?></span><?php echo change_floor($i['location']);?><br>
-                    <span class="bold"><?php echo $lang['toilet_id'].": ";?></span><?php echo change_id($i['id']);?><br>
+                    <span class="bold"><?php echo $lang['toilet_id'].": ";?></span><?php echo $i['id'];?><br>
                     <span class="bold"><?php echo $lang['toilet_type'].": ";?></span><?php echo change_type($i['type']);?><br>
                     <span class="bold"><?php echo $lang['toilet_time'].": ";?></span><?php echo todate(strtotime($i['time']));?><br>
                     <span class="bold"><?php echo $lang['toilet_status'].": ";?></span><?php echo change_status($i['status']);?><br>
-                    <span class="bold"><?php echo $lang['toilet_mark as done'].": ";?></span><?php echo change_markasdone($i['mark as done']);?><br>
+                    <span class="bold"><?php echo $lang['toilet_mark as done'].": ";?></span><?php echo change_mark_as_done($i['mark_as_done']);?><br>
   </section>
 </div>
