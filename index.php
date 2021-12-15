@@ -1,6 +1,7 @@
 <!-- import the page header -->
 <?php include('src/header.html') ?>
-
+<?php include ('src/mainmenu.php') ?>
+ 
 <form action="mainmenu.php" method="post">
   <div class="imgcontainer"> 
     <img src="" alt="" class="">
@@ -31,3 +32,14 @@
     </label>
   </div>
 </form>
+
+
+  <div class="container" style="background-color:#f1f1f1"> 
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+<script>
+
+</script>

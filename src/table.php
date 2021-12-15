@@ -72,9 +72,11 @@
 									data: ({
 										"id": id
 									}),
-									dataType: "json",
+									
 									success: function(response) {
-										if (response.success == true) {
+										
+										if (response.includes(true)) {
+										
 											iziToast.success({
 												title: 'OK',
 												message: '<?php echo $lang['toilet_added'] ?>',
