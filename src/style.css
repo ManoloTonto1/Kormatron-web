@@ -297,6 +297,9 @@ body {
     font-weight: bolder;
 }
 
-.uname-password {
-    color: rgb(255, 0, 85);
+.tooltip-txt {
+    text-align: center;
+    padding-left: 0.5rem;
 }
+
+.uname-password {}
