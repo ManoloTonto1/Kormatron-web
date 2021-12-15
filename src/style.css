@@ -97,7 +97,6 @@ body {
     .icon {
         display: block;
     }
-
     .notif {
         display: none;
     }
@@ -141,7 +140,6 @@ body {
     from {
         left: -100px;
     }
-
     to {
         left: 0px;
     }
@@ -304,7 +302,4 @@ body {
     padding-left: 0.5rem;
 }
 
-.uname-password {
-    color: chartreuse;
-
-}
+.uname-password {}
