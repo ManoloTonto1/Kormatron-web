@@ -31,6 +31,34 @@
           e.preventDefault();
           $('#password-container').slideToggle();
         });
+
+        $("#user_submit").click(function (e) { 
+          e.preventDefault();
+          $.ajax({
+            type: "POST",
+            url: "src/db/post_queue.php",
+									data: ({
+										"new_pass": $("input[name='new_password']").val(),
+									}),
+            
+            success: function (response) {
+              if (response.includes(true)) {
+										
+                    iziToast.success({
+                      title: 'OK',
+                      message: '<?php echo $lang['password_change'] ?>',
+                    });
+                  } else {
+                    iziToast.error({
+                      title: 'Error',
+                      message: '<?php echo $lang['password_change_error'] ?>',
+                    });
+
+                  }
+              
+            }
+          });
+        });
         
       });
     </script>
