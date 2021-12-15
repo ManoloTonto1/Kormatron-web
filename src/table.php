@@ -68,7 +68,7 @@
 								var id = <?php echo $i['id'] ?>;
 								$.ajax({
 									type: "POST",
-									url: "src/db/post_queue.php",
+									url: "db/post_queue.php",
 									data: ({
 										"id": id
 									}),

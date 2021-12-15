@@ -30,7 +30,7 @@
 						<td><?php echo change_type($i['type']); ?></td>
 						<td><?php echo todate(strtotime($i['time'])); ?></td>
 						<td><?php echo change_status($i['status']); ?></td>
-						<td><button id="module-info<?php echo $i['id'] ?>" data-iziModal-open="#modal<?php echo $i['id'] ?>" class="product-module-icon"><i class="fas fa-info-circle"></i></button></td>
+						<td><button class="product-module-icon"><i class="fas fa-info-circle"></i></button></td>
 					</tr>
 
           <?php }} ?>

@@ -24,7 +24,7 @@
   </header>
 <?php include('settings.php');
       include('user.php');
-      include('notifications.php');
+     // include('notifications.php');
 ?>
 
 <!--body-->

@@ -44,7 +44,7 @@
 								//if there was an instance of the modal, remove it.
 								$('#modal<?php echo $i['id']?>').iziModal('destroy');
 								//create a new modal.
-								$(".div1").load("src/table_modal.php?id=<?php echo $i['id']?>");
+								$(".div1").load("table_modal.php?id=<?php echo $i['id']?>");
 								$('#modal<?php echo $i['id'] ?>').iziModal({
 									transitionIn: 'bounceInDown'
 								});
@@ -54,7 +54,7 @@
 									var id = <?php echo $i['id'] ?>;
 									$.ajax({
 										type: "POST",
-										url: "src/db/post_queue.php",
+										url: "db/post_queue.php",
 										data: ({
 											"id": id
 										}),
