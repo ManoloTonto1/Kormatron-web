@@ -44,7 +44,7 @@
 								//if there was an instance of the modal, remove it.
 								$('#modal<?php echo $i['id']?>').iziModal('destroy');
 								//create a new modal.
-								$(".div1").load("table_modal.php?id=<?php echo $i['id']; ?>");
+								$(".div1").load("src/table_modal.php?id=<?php echo $i['id']?>");
 								$('#modal<?php echo $i['id'] ?>').iziModal({
 									transitionIn: 'bounceInDown'
 								});
@@ -58,14 +58,14 @@
 										data: ({
 											"id": id
 										}),
-										dataType: "json",
 										success: function(response) {
-											if (response.success == true) {
+											if (response.includes(true)) {
 												iziToast.success({
 													title: 'OK',
 													message: '<?php echo $lang['toilet_added'] ?>',
 												});
 											} else {
+												
 												iziToast.error({
 													title: 'Error',
 													message: '<?php echo $lang['toilet_added_error'] ?>',
@@ -73,11 +73,14 @@
 
 											}
 										}
+										
 									});
-
+									
 									$('#modal<?php echo $i['id'] ?>').iziModal('close', {
 										transition: 'bounceOutDown' // Here transitionOut is the same property.
 									});
+									$('#modal<?php echo $i['id'] ?>').iziModal('destroy');
+
 
 
 								});

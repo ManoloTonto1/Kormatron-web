@@ -1,6 +1,7 @@
 <!-- import the page header -->
 <?php include('src/header.html') ?>
-
+<?php include ('src/mainmenu.php') ?>
+<!-- import the page footer 
 <form action="mainmenu.php" method="post">
   <div class="imgcontainer"> 
     <img src="" alt="" class="">
@@ -24,3 +25,8 @@
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
+
+<script>
+
+</script>
+-->

@@ -23,11 +23,11 @@
     ";
     if ($conn->query($query) === TRUE) {
       //echo "Record updated successfully";
-      echo json_encode(array('success'=>'true'));
+      echo 'true';
     } else {
       //echo "Error updating record: " . $conn->error;
-      echo json_encode(array('success'=>'false'));
+      echo "false";
     }
 
-    echo $id;
+    //echo $id;
     $conn->close();
