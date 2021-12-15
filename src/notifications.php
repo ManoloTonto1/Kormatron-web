@@ -1,20 +1,54 @@
     <!-- Modal structure -->
+    <?php include('src/db/connectdb.php') ?>  
+    <?php include('src/db/scripts.php') ?>
+    <?php include('src/lang/translate.php') ?>
+
+    <h3><?php echo $lang['toilets'] ?> </h3>
+	<table id="toilet_table" class="table">
+		<thead>
+			<tr class="table-top">
+
+				<th width="20%"><?php echo $lang['toilet_floor']; ?></th>
+				<th width="20%"><?php echo $lang['toilet_type']; ?></th>
+				<th width="20%"><?php echo $lang['toilet_time']; ?></th>
+				<th width="30%"><?php echo $lang['toilet_status']; ?></th>
+				<th width="10%"><?php echo $lang['toilet_view']; ?></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<?php if (empty(get_toilets())) { ?>
+				<td colspan="5" style='text-align: center;'> <?php echo "Nothing to see here ¯\_(ツ)_/¯"; ?> </td>
+			<?php	} else {
+			?>
+				<?php
+				foreach (get_toilets() as $i) {
+				?>
+
+					<tr class="table-bottom">
+						<td><?php echo change_floor($i['location']); ?></td>
+						<td><?php echo change_type($i['type']); ?></td>
+						<td><?php echo todate(strtotime($i['time'])); ?></td>
+						<td><?php echo change_status($i['status']); ?></td>
+						<td><button id="module-info<?php echo $i['id'] ?>" data-iziModal-open="#modal<?php echo $i['id'] ?>" class="product-module-icon"><i class="fas fa-info-circle"></i></button></td>
+					</tr>
+
+          <?php }} ?>
+        </table>
     <div id="modal-notifications" data-iziModal-title="Notifications" data-iziModal-icon="fa fa-diamond"
       data-iziModal-headerColor="#252833" data-iziModal-background="#2f3241">
       <section class="hide modal-body">
-        <form action="" method="post" id="product-form">
-          <div id="modal-input-container">
-            <input id="product-name" class="modal-input" type="text" placeholder="Product Name" name="product_name">
-            <input id="product-category" class="modal-input" type="text" placeholder="Catergory" name="category">
-            <div id="atribute-container"></div>
-          </div>
-        </form>
+      <div id="modal<?php echo $i['id']?>" data-iziModal-title="Toilet Info" data-iziModal-icon="fas fa-clipboard-list"
+  data-iziModal-headerColor="#252833" data-iziModal-background="#2f3241">
+  <section class="hide modal-body">
+    <form action="" method="post" id="product-form">
+      <div id="modal-input-container">
 
-
-        <footer>
-          <button id="submit-product" class="modal-btn" name="submit">Save</button>
-          <button id="add-atribute" class="modal-btn modal-btn-right"><i class="fas fa-plus"></i> New atribute</button>
-        </footer>
-
-      </section>
-    </div>
+                    <span class="bold"><?php echo $lang['toilet_floor'].": ";?></span><?php echo change_floor($i['location']);?><br>
+                    <span class="bold"><?php echo $lang['toilet_id'].": ";?></span><?php echo change_id($i['id']);?><br>
+                    <span class="bold"><?php echo $lang['toilet_type'].": ";?></span><?php echo change_type($i['type']);?><br>
+                    <span class="bold"><?php echo $lang['toilet_time'].": ";?></span><?php echo todate(strtotime($i['time']));?><br>
+                    <span class="bold"><?php echo $lang['toilet_status'].": ";?></span><?php echo change_status($i['status']);?><br>
+                    <span class="bold"><?php echo $lang['toilet_mark as done'].": ";?></span><?php echo change_markasdone($i['mark as done']);?><br>
+  </section>
+</div>
