@@ -28,6 +28,10 @@ function get_toilets(){
 
 }
 
+function get_queue(){
+  
+}
+
 
 
 ?> 

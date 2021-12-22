@@ -1,6 +1,6 @@
-<?php include('src/db/connectdb.php') ?>
-<?php include('src/db/scripts.php') ?>
-<?php include('src/lang/translate.php') ?>
+<?php include('db/connectdb.php') ?>
+<?php include('db/scripts.php') ?>
+<?php include('lang/translate.php') ?>
 
 <div id='toilets'>
 
@@ -68,7 +68,7 @@
 								var id = <?php echo $i['id'] ?>;
 								$.ajax({
 									type: "POST",
-									url: "src/db/post_queue.php",
+									url: "db/post_queue.php",
 									data: ({
 										"id": id
 									}),
@@ -112,8 +112,12 @@
 
 <script>
 	function refresh_div() {
-		$("#toilets").load("src/table_reload.php");
+		$("#toilets").load("table_reload.php");
 	}
 
 	t = setInterval(refresh_div, 3000);
 </script>
+
+
+
+

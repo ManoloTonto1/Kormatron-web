@@ -30,4 +30,4 @@
 
   });
   </script>
-  <script src="src/nav.js" type="text/javascript"></script>
+  <script src="nav.js" type="text/javascript"></script>
