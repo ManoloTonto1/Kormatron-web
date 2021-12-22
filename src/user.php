@@ -18,7 +18,7 @@
 
         <footer>
           <button id="user_submit" class="modal-btn" name="submit"><i class="fas fa-save"></i> <?php echo $lang['save']?></button>
-          <a href="src/db/Logout.php" id="logout" class="modal-btn modal-btn-right"><i class="fas fa-sign-out-alt"></i> <?php echo $lang['logout'] ?></a>
+          <a href="db/Logout.php" id="logout" class="modal-btn modal-btn-right"><i class="fas fa-sign-out-alt"></i> <?php echo $lang['logout'] ?></a>
           <button id="change_password" class="modal-btn modal-btn-right"><i class="fas fa-unlock-alt"></i> <?php echo $lang['change_password'] ?></button>
         </footer>
 
