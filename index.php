@@ -1,7 +1,4 @@
 <!-- import the page header -->
-
-<?php include('src/header.html') ?>
-<?php //include ('src/mainmenu.php') ?>
  
 <form action="mainmenu.php" method="post">
   <div class="imgcontainer"> 
