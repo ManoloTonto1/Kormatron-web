@@ -1,9 +1,4 @@
 <!-- import the page header -->
- 
-<form action="mainmenu.php" method="post">
-  <div class="imgcontainer"> 
-    <img src="" alt="" class="">
-  </div>
 
 <?php include('src/header.php') ?>
   <main id="swup" class="transition-fade">
