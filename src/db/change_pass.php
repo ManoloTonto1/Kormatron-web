@@ -1,12 +1,11 @@
 <?php
-
     $servername = "localhost";
     $username = "root";
     $password = "mypass";
     $dbname = "kormatron_";
 
     print_r($_POST); 
-    $id = $_SESSION['id'];
+    $id = $_SESSION['id'].;
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,7 +17,7 @@
     
     $query = "
     UPDATE user
-    SET password = '".hash("sha256",$_POST['new_password'])."'
+    SET password = '".$_POST['new_password'])."'
     WHERE id = '".$id."'
     ";
     if ($conn->query($query) === TRUE) {
@@ -31,3 +30,5 @@
 
     //echo $id;
     $conn->close();
+
+?>

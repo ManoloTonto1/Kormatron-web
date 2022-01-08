@@ -1,8 +1,8 @@
 <!-- import the page header -->
 <?php include('../src/header.php') ?>
 <?php include('lang/english.php') ?>
-
-
+<?php Session_start(); ?>
+<?php print_r($_SESSION); ?>
 <body>
 
 <!-- Top container -->
@@ -31,6 +31,7 @@
 <div class="table-div">
 <?php include('../src/table.php');?>
 </div>
+
 
 
 

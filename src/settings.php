@@ -1,10 +1,10 @@
-    <!-- Modal structure -->
+<!-- Modal structure -->
     <div id="modal-settings" data-iziModal-title="Settings" data-iziModal-icon="fa fa-diamond"
       data-iziModal-headerColor="#252833" data-iziModal-background="#2f3241">
       <section class="hide modal-body">
         <form action="" method="post" id="product-form">
           <div id="modal-input-container">
-            <input id="product-name" class="modal-input" type="text" placeholder="Product Name" name="product_name">
+            <input id="product-name" class="modal-input" type="text" placeholder="Product Name" name="product_name" value="">
             <input id="product-category" class="modal-input" type="text" placeholder="Catergory" name="category">
             <div id="atribute-container"></div>
           </div>

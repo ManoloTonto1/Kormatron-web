@@ -1,4 +1,5 @@
 <?php
+    Session_start();
 
     $servername = "localhost";
     $username = "root";
@@ -19,6 +20,9 @@
     
     $query = "select * from user where first_name ='$uName' and pincode = '$pWord'";
     if ($conn->query($query)->num_rows == 1) {
+        $_SESSION['first_name'] = $uName;
+        $_SESSION['last_name'] = $conn->query($query)->fetch_object()->last_name;
+        $_SESSION['id'] = $conn->query($query)->fetch_object()->id;
         header("location:../mainmenu.php");
     } else {
       print_r($conn->query($query));

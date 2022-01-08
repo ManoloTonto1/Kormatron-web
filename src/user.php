@@ -5,19 +5,19 @@
         <form action="" method="post" id="user-form">
           <div id="modal-input-container">
             <div class="modal-label"><?php echo $lang['name']?>:</div>
-            <input class="modal-input pointer" readonly type="text" placeholder="<?php echo $lang['name']?>" name="name">
+            <input class="modal-input pointer" readonly type="text" placeholder="<?php echo $lang['name']?>" name="name" value="<?php echo $_SESSION['first_name']; ?>">
             <div class="modal-label"><?php echo $lang['last_name']?>:</div>
-            <input class="modal-input pointer" readonly type="text" placeholder="<?php echo $lang['last_name']?>" name="last_name">
+            <input class="modal-input pointer" readonly type="text" placeholder="<?php echo $lang['last_name']?>" name="last_name" value="<?php echo $_SESSION['last_name']; ?>">
           </div>
           <div id="password-container" class="password-container">
           <div class="modal-label"><?php echo $lang['new_password']?>:</div>
-            <input class="modal-input" type="text" placeholder="<?php echo $lang['new_password']?>" name="new_password">
+            <input class="modal-input" type="text" placeholder="<?php echo $lang['new_password']?>" name="new_password" id="new_password" required>
           </div>
         </form>
 
 
         <footer>
-          <button id="user_submit" class="modal-btn" name="submit"><i class="fas fa-save"></i> <?php echo $lang['save']?></button>
+          <button type="submit" form="user-form" id="user_submit" class="modal-btn" name="submit"><i class="fas fa-save"></i> <?php echo $lang['save']?></button>
           <a href="db/Logout.php" id="logout" class="modal-btn modal-btn-right"><i class="fas fa-sign-out-alt"></i> <?php echo $lang['logout'] ?></a>
           <button id="change_password" class="modal-btn modal-btn-right"><i class="fas fa-unlock-alt"></i> <?php echo $lang['change_password'] ?></button>
         </footer>
@@ -33,13 +33,14 @@
         });
 
         $("#user_submit").click(function (e) { 
+          var new_password = document.getElementById('new_password');
           e.preventDefault();
           $.ajax({
             type: "POST",
-            url: "src/db/post_queue.php",
-									data: ({
-										"new_pass": $("input[name='new_password']").val(),
-									}),
+            url: "db/change_pass.php",
+            data: ({
+              "new_password": new_password
+            }),
             
             success: function (response) {
               if (response.includes(true)) {
