@@ -5,7 +5,15 @@
 function change_type($cause){
 
 
-        include('lang/english.php');
+    
+    
+          if($_SESSION['language'] == "nl"){
+            include('lang/dutch.php'); 
+          }
+          else{
+            include('lang/english.php'); 
+          }
+          
     
     
     switch($cause){
@@ -26,7 +34,12 @@ function change_type($cause){
 }
 function change_type_reload($cause){
 
-    include('lang/english.php');
+    if($_SESSION['language'] == "nl"){
+        include('lang/dutch.php'); 
+      }
+      else{
+        include('lang/english.php'); 
+      }
 
 
         switch($cause){
@@ -51,7 +64,12 @@ function change_type_reload($cause){
 function change_floor($cause){
 
 
-    include('lang/english.php');
+    if($_SESSION['language'] == "nl"){
+        include('lang/dutch.php'); 
+      }
+      else{
+        include('lang/english.php'); 
+      }
 
 
 switch($cause){
@@ -95,7 +113,12 @@ switch($cause){
 }
 function change_floor_reload($cause){
 
-include('lang/english.php');
+    if($_SESSION['language'] == "nl"){
+        include('lang/dutch.php'); 
+      }
+      else{
+        include('lang/english.php'); 
+      }
 
 
     switch($cause){
@@ -140,7 +163,12 @@ default:
 function change_status($cause){
 
 
-    include('lang/english.php');
+    if($_SESSION['language'] == "nl"){
+        include('lang/dutch.php'); 
+      }
+      else{
+        include('lang/english.php'); 
+      }
 
 
 switch($cause){
@@ -160,7 +188,12 @@ switch($cause){
 function change_status_reload($cause){
 
 
-    include('lang/english.php');
+    if($_SESSION['language'] == "nl"){
+        include('lang/dutch.php'); 
+      }
+      else{
+        include('lang/english.php'); 
+      }
 
 
 switch($cause){

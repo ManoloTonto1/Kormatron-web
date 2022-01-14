@@ -97,6 +97,7 @@ body {
     .icon {
         display: block;
     }
+
     .notif {
         display: none;
     }
@@ -140,6 +141,7 @@ body {
     from {
         left: -100px;
     }
+
     to {
         left: 0px;
     }
@@ -308,7 +310,7 @@ body {
     padding: .5em 1em;
     border-radius: .5em;
     border: 1px solid;
-    margin-bottom: 1em;
+
     transition: 600ms;
     border-color: transparent;
     outline: none;
@@ -316,6 +318,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    margin-top: 3em;
 }
 
 .login-button:hover {
@@ -323,19 +326,46 @@ body {
     color: black;
 }
 
+.login-label {
+    padding-bottom: 1em;
+}
+
 .uname-password {
-    width: 600px;
+    background-color: var(--primary-bg-color);
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding: 5em;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+    
+}
+
+.login-image {
+    width: 65%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.login-image {
-    margin-left: 7%;
+@media screen and (max-width: 768px) {
+    .login-image {
+        width: 100%;
+    }
+
+    .uname-password {
+        padding: 2em;
+        width: 101%;
+    }
 }
+
+
 
 .login-input {
     color: whitesmoke;
-    width: 70%;
+    width: 100%;
     padding: .5em 1em;
     border-radius: .5em;
     border: 1px solid;
@@ -344,105 +374,89 @@ body {
     border-color: transparent;
     outline: none;
     background-color: var(--third-bg-color);
-    margin-left: auto;
-    margin-right: auto;
+
     display: block;
 }
 
+.login-div {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 
-/* The switch - the box around the slider */
+}
 
-.switch {
+#main-login {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.language-check {
+
+    display: block;
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-
-/* Hide default HTML checkbox */
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-
-/* The slider */
-
-.slider {
-    position: absolute;
+    padding-left: 35px;
+    margin-bottom: 12px;
     cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    line-height: 1.1;
+}
+/* Hide the browser's default radio button */
+.language-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked+.slider {
-    background-color: #2196F3;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-
-/* Rounded sliders */
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
     border-radius: 50%;
-}
-
-.login-slider {
-    position: absolute;
-    top: 20px;
-    right: 70%;
-}
-
-.remember-me {
-    margin-bottom: 6em;
-}
-
-.flag{
-
-    position: absolute;
-    top: 20%;
-    right: 60%;
-}
-
-.transition-fade {
-    transition: 0.4s;
-    opacity: 1;
   }
   
-  html.is-animating .transition-fade {
-    opacity: 0;
+  /* On mouse-over, add a grey background color */
+  .language-check:hover input ~ .checkmark {
+    background-color: #ccc;
   }
   
+  /* When the radio button is checked, add a blue background */
+  .language-check input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .language-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .language-check .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+.language.label {}

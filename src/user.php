@@ -5,9 +5,9 @@
         <form action="" method="post" id="user-form">
           <div id="modal-input-container">
             <div class="modal-label"><?php echo $lang['name']?>:</div>
-            <input class="modal-input pointer" readonly type="text" placeholder="<?php echo $lang['name']?>" name="name" value="<?php echo $_SESSION['first_name']; ?>">
+            <input class="modal-input pointer" readonly type="text" name="name" value="<?php echo $_SESSION['first_name']?>">
             <div class="modal-label"><?php echo $lang['last_name']?>:</div>
-            <input class="modal-input pointer" readonly type="text" placeholder="<?php echo $lang['last_name']?>" name="last_name" value="<?php echo $_SESSION['last_name']; ?>">
+            <input class="modal-input pointer" readonly type="text" name="last_name" value="<?php echo $_SESSION['last_name']?>">
           </div>
           <div id="password-container" class="password-container">
           <div class="modal-label"><?php echo $lang['new_password']?>:</div>
@@ -38,11 +38,12 @@
           $.ajax({
             type: "POST",
             url: "db/change_pass.php",
-            data: ({
-              "new_password": new_password
-            }),
+									data: ({
+										"new_pass": $("input[name='new_password']").val(),
+									}),
             
             success: function (response) {
+              console.log(response);
               if (response.includes(true)) {
 										
                     iziToast.success({
