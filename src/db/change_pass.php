@@ -1,13 +1,15 @@
 <?php
+session_start();
 
     $servername = "localhost";
     $username = "root";
     $password = "mypass";
     $dbname = "kormatron_";
+ 
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
+    $new_pass = $_POST['new_pass'];
 
-    print_r($_POST); 
-    $id = $_SESSION['id'];
-    
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -16,11 +18,8 @@
       echo "Connection failed";
     }
     
-    $query = "
-    UPDATE user
-    SET password = '".hash("sha256",$_POST['new_password'])."'
-    WHERE id = '".$id."'
-    ";
+    $query = "UPDATE user SET pincode = '$new_pass' WHERE user.first_name = 'shaq' AND user.lastname = 'boktor'";
+    echo $conn->query($query);
     if ($conn->query($query) === TRUE) {
       //echo "Record updated successfully";
       echo 'true';

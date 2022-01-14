@@ -1,6 +1,17 @@
 <!-- import the page header -->
 <?php include('../src/header.php') ?>
-<?php include('lang/english.php') ?>
+<?php include('db/connectdb.php') ?>
+<?php include('db/scripts.php') ?>
+<?php include('lang/translate.php') ?>
+<?php session_start(); ?>
+<?php 
+      if($_SESSION['language'] == "nl"){
+        include('lang/dutch.php'); 
+      }
+      else{
+        include('lang/english.php'); 
+      }
+      ?>
 
 
 <body>

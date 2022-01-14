@@ -38,7 +38,7 @@ while 1:
         
                 #run sql query
          mydb = mysql.connector.connect(
-         host="localhost",
+             host="localhost",
          user="root",
          password="mypass",
          database="kormatron_"

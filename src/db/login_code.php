@@ -6,8 +6,9 @@
     $dbname = "kormatron_";
 
     print_r($_POST); 
-    $uName = $_POST['bokkie'];
-    $pWord = $_POST['WW'];
+    $uName = $_POST['username'];
+    $pWord = $_POST['password'];
+    $lang = $_POST['lang'];
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,12 +19,19 @@
     }
     
     $query = "select * from user where first_name ='$uName' and pincode = '$pWord'";
-    if ($conn->query($query)->num_rows == 1) {
-        header("location:../mainmenu.php");
-    } else {
-      print_r($conn->query($query));
-      header("location:../../index.php");
+    print_r($conn->query($query)->fetch_assoc()); 
+    $result = $conn->query($query)->fetch_assoc();
+    if ($result['pincode'] === $pWord) {
+      session_start();
+      echo 'true';
+      $_SESSION['first_name'] = $result['first_name'];
+      $_SESSION['last_name'] = $result['last_name'];
+      $_SESSION['id'] = $result['id'];
+      $_SESSION['language'] = $lang;
+      $conn->close();
+    } 
+    else {
+      echo 'false';
     }
 
-    //echo $id;
-    $conn->close();
+  

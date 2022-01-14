@@ -1,7 +1,5 @@
-<?php include('db/connectdb.php') ?>
-<?php include('db/scripts.php') ?>
-<?php include('lang/translate.php') ?>
-<?php include('lang/english.php') ?>
+
+<?session_start(); ?>
 
 <div id='toilets'>
 

@@ -17,7 +17,8 @@
     <script href="/kormatron-web/node_modules/jquery/dist/jquery.min.js" type="text/javascript" ></script>
     <script src="/kormatron-web/node_modules/izimodal/js/iziModal.min.js" type="text/javascript"></script>
     <script src="/kormatron-web/node_modules/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
-    <script src="/kormatron-web/node_modules/swup/dist/swup.js" type="text/javascript"></script>
+    <script defer src="/kormatron-web/node_modules/swup/dist/swup.min.js" type="text/javascript"></script>
+    <script defer src="/kormatron-web/src/swup.js"></script>
     <link rel="stylesheet" href="/kormatron-web/src/style.css">
 </head>
 
