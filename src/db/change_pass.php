@@ -10,6 +10,9 @@ session_start();
     $last_name = $_SESSION['last_name'];
     $new_pass = $_POST['new_pass'];
 
+    print_r($_POST); 
+    $id = $_SESSION['id'].;
+    
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -18,6 +21,11 @@ session_start();
       echo "Connection failed";
     }
     
+    $query = "
+    UPDATE user
+    SET password = '".$_POST['new_password'])."'
+    WHERE id = '".$id."'
+    ";
     $query = "UPDATE user SET pincode = '$new_pass' WHERE user.first_name = 'shaq' AND user.lastname = 'boktor'";
     echo $conn->query($query);
     if ($conn->query($query) === TRUE) {
@@ -30,3 +38,5 @@ session_start();
 
     //echo $id;
     $conn->close();
+
+?>

@@ -11,13 +11,13 @@
           </div>
           <div id="password-container" class="password-container">
           <div class="modal-label"><?php echo $lang['new_password']?>:</div>
-            <input class="modal-input" type="text" placeholder="<?php echo $lang['new_password']?>" name="new_password">
+            <input class="modal-input" type="text" placeholder="<?php echo $lang['new_password']?>" name="new_password" id="new_password" required>
           </div>
         </form>
 
 
         <footer>
-          <button id="user_submit" class="modal-btn" name="submit"><i class="fas fa-save"></i> <?php echo $lang['save']?></button>
+          <button type="submit" form="user-form" id="user_submit" class="modal-btn" name="submit"><i class="fas fa-save"></i> <?php echo $lang['save']?></button>
           <a href="db/Logout.php" id="logout" class="modal-btn modal-btn-right"><i class="fas fa-sign-out-alt"></i> <?php echo $lang['logout'] ?></a>
           <button id="change_password" class="modal-btn modal-btn-right"><i class="fas fa-unlock-alt"></i> <?php echo $lang['change_password'] ?></button>
         </footer>
@@ -33,6 +33,7 @@
         });
 
         $("#user_submit").click(function (e) { 
+          var new_password = document.getElementById('new_password');
           e.preventDefault();
           $.ajax({
             type: "POST",
