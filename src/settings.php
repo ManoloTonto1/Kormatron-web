@@ -1,4 +1,5 @@
 <!-- Modal structure -->
+
     <div id="modal-settings" data-iziModal-title="Settings" data-iziModal-icon="fa fa-diamond"
       data-iziModal-headerColor="#252833" data-iziModal-background="#2f3241">
       <section class="hide modal-body">

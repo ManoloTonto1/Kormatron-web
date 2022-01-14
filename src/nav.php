@@ -9,8 +9,6 @@
 
       <a href="#" data-izimodal-open="#modal-user" class="navbar-icon margin-top"><i class="fa fa-user"></i></a>
       <span class="tooltip-txt"><?php echo $lang['user']?></span>
-      <a href="#" data-izimodal-open="#modal-settings" class="navbar-icon margin-top"><i class="fa fa-cog"></i></a>
-      <span class="tooltip-txt"><?php echo $lang['settings']?></span>
 
   </div>
 
@@ -24,7 +22,7 @@
 <!-- start the modals -->
 <script>
   $(document).ready(function () {
-    $('#modal-settings').iziModal();
+    //$('#modal-settings').iziModal();
     $('#modal-user').iziModal();
     $('#modal-notifications').iziModal();
 

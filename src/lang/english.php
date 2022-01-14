@@ -24,7 +24,7 @@ $lang = array(
     'edit' => 'Edit',
     'delete' => 'Delete',
     'description' => 'Description',
-    'notifications' => 'notifications',
+    'notifications' => 'To Do',
     'welcome' => 'Welcome',
     'toilets' => 'Toilets',
     'toilet_view' => 'View',
@@ -53,6 +53,11 @@ $lang = array(
     'floor8' => '8th Floor',
     'floor9' => '9th Floor',
     'unknown' => 'Unknown',
+    'password_change_logging' => 'logging out',
+    'password_change_comment' => 'You will be logged out in 5 seconds',
+    'toilet_mark_as_done' => 'Mark as done',
+    'toilet_done' => 'Done!',
+    'toilet_done_error' => 'Error!',
 
 );
 ?>

@@ -10,7 +10,11 @@ session_start();
     $last_name = $_SESSION['last_name'];
     $new_pass = $_POST['new_pass'];
 
-    print_r($_POST); 
+    //check if password is empty
+    if(empty($new_pass)){
+        echo "false";
+        return;
+    }
     $id = $_SESSION['id'];
     
     // Create connection

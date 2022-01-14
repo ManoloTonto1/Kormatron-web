@@ -6,7 +6,7 @@ $lang = array(
     'save' => 'Opslaan',
     'menu' => 'Menu',
     'settings' => 'Instellingen',
-    'user' => 'Gebruiker',
+    'user' => 'Account',
     'todo' => 'To do',
     'login' => 'Login',
     'logout' => 'Logout',
@@ -24,7 +24,7 @@ $lang = array(
     'edit' => 'Aanpassen',
     'delete' => 'Verwijderen',
     'description' => 'Beschrijving',
-    'notifications' => 'notificaties',
+    'notifications' => 'TO DO',
     'welcome' => 'Welkom',
     'toilets' => 'Toiletten',
     'toilet_view' => 'Bekijk',
@@ -53,5 +53,7 @@ $lang = array(
     'floor8' => '8ste Verdieping',
     'floor9' => '9de Verdieping',
     'unknown' => 'Unknown',
-
+    'password_change_logging' => 'Uitloggen',
+    'password_change_comment' => 'U wordt uitgelogd binnen 5 seconden',
+    'toilet_mark_as_done' => 'Mark as done',
 );

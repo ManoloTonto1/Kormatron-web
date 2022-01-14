@@ -294,7 +294,28 @@ body {
     text-decoration: none;
     transform: scale(0.9);
 }
+.product-module-icon-green {
+    background-color: transparent;
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 50%;
+    border: none;
+    transition: 100ms;
+}
 
+.product-module-icon-green:hover {
+    color: green;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+.product-module-icon-green:active {
+    color: rgb(2, 185, 2);
+    text-decoration: none;
+    transform: scale(0.9);
+}
 .bold {
     font-weight: bolder;
 }

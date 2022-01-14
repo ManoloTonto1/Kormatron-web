@@ -10,7 +10,7 @@
           </div>
           <div id="password-container" class="password-container">
             <div class="modal-label"><?php echo $lang['new_password'] ?>:</div>
-            <input class="modal-input" type="text" placeholder="<?php echo $lang['new_password'] ?>" name="new_password" id="new_password" required>
+            <input class="modal-input" type="password" placeholder="<?php echo $lang['new_password'] ?>" name="new_password" id="new_password" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
           </div>
         </form>
 
@@ -50,8 +50,8 @@
                   message: '<?php echo $lang['password_change'] ?>',
                 });
                 iziToast.info({
-                  title: 'Logging Out',
-                  message: 'You will be logged out in 5 seconds',
+                  title: '<?php echo $lang['password_change_logging'] ?>',
+                  message: '<?php echo $lang['password_change_comment'] ?>',
                 });
                 setTimeout(function() {
                   window.location.href = "db/Logout.php";

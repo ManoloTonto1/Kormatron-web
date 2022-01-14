@@ -14,7 +14,7 @@
         <input class="login-input" id="username" type="text" placeholder="Enter Username" name="username" required>
 
         <label class="login-label"><b>Password</b></label>
-        <input class="login-input" id="password" type="password" placeholder="Enter Password" name="password" required>
+        <input class="login-input" id="password" type="password" placeholder="Enter Password" name="password" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
       </div>
       <button id="login-btn" class="login-button" type="submit">Login</button>
       <!--choose language -->
