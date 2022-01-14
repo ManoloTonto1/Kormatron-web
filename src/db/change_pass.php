@@ -11,7 +11,7 @@ session_start();
     $new_pass = $_POST['new_pass'];
 
     print_r($_POST); 
-    $id = $_SESSION['id'].;
+    $id = $_SESSION['id'];
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,10 +23,10 @@ session_start();
     
     $query = "
     UPDATE user
-    SET password = '".$_POST['new_password'])."'
+    SET pincode = '".$new_pass."'
     WHERE id = '".$id."'
     ";
-    $query = "UPDATE user SET pincode = '$new_pass' WHERE user.first_name = 'shaq' AND user.lastname = 'boktor'";
+    //$query = "UPDATE user SET pincode = '$new_pass' WHERE user.first_name = 'shaq' AND user.lastname = 'boktor'";
     echo $conn->query($query);
     if ($conn->query($query) === TRUE) {
       //echo "Record updated successfully";
@@ -38,5 +38,6 @@ session_start();
 
     //echo $id;
     $conn->close();
+  
 
 ?>
