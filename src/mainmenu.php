@@ -3,7 +3,12 @@
 <?php include('db/connectdb.php') ?>
 <?php include('db/scripts.php') ?>
 <?php include('lang/translate.php') ?>
-<?php session_start(); ?>
+<?php 
+session_start(); 
+if(!isset($_SESSION['id'])){
+    header("Location: /kormatron-web/index.php");
+}
+?>
 <?php 
       if($_SESSION['language'] == "nl"){
         include('lang/dutch.php'); 

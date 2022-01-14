@@ -1,8 +1,8 @@
 <?php
 // place all the language specific elements of the language file in this section
 $lang = array(
-    'name' => 'Name',
-    'last_name' => 'Last Name',
+    'name' => 'naam',
+    'last_name' => 'achternaam',
     'position' => 'Position',
     'save' => 'Save',
     'menu' => 'Menu',
