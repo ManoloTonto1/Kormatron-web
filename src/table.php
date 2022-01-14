@@ -1,7 +1,3 @@
-<?php include('db/connectdb.php') ?>
-<?php include('db/scripts.php') ?>
-<?php include('lang/translate.php') ?>
-
 <div id='toilets'>
 
 	<h3><?php echo $lang['toilets'] ?> </h3>
