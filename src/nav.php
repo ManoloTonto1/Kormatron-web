@@ -27,7 +27,7 @@
     $('#modal-notifications').iziModal();
     $('#todo').click(function (e) { 
       
-       //$( "#modal-notifications" ).load( "notifications.php #modal-notifications" );
+       $( "#notif_table" ).load( "notifications_table.php" );
    
       
     });
