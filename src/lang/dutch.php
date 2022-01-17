@@ -55,5 +55,7 @@ $lang = array(
     'unknown' => 'Unknown',
     'password_change_logging' => 'Uitloggen',
     'password_change_comment' => 'U wordt uitgelogd binnen 5 seconden',
-    'toilet_mark_as_done' => 'Mark as done',
+    'toilet_mark_as_done' => 'Markeer als klaar',
+    'toilet_done' => 'Klaar!',
+    'toilet_done_error' => 'Error!',
 );

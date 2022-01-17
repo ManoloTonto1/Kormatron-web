@@ -2,7 +2,7 @@
 <nav class="sidebar" style="z-index:3;" id="mySidebar"><br>
   <div class="navbar-icon-container">
   <div>
-  <a href="#" data-izimodal-open="#modal-notifications"class="navbar-icon notif"><i class="fas fa-clipboard-list"></i></a>
+  <a id="todo" href="#" data-izimodal-open="#modal-notifications"class="navbar-icon notif"><i class="fas fa-clipboard-list"></i></a>
   <span class="tooltip-txt"><?php echo $lang['todo']?></span>
   <span class="sidebar-tooltip"></span>
   </div>
@@ -25,6 +25,12 @@
     //$('#modal-settings').iziModal();
     $('#modal-user').iziModal();
     $('#modal-notifications').iziModal();
+    $('#todo').click(function (e) { 
+      
+       //$( "#modal-notifications" ).load( "notifications.php #modal-notifications" );
+   
+      
+    });
 
   });
   </script>

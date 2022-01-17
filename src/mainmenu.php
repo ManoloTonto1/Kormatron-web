@@ -2,7 +2,7 @@
 <?php include('../src/header.php') ?>
 <?php include('db/connectdb.php') ?>
 <?php include('db/scripts.php') ?>
-<?php include('lang/translate.php') ?>
+
 <?php 
 session_start(); 
 if(!isset($_SESSION['id'])){
