@@ -1,7 +1,7 @@
 <!-- import the page header -->
 
 <?php include('src/header.php') ?>
-<main id="main-login">
+<main id="swup" class="transition-fade main-login">
 
   <form>
 
@@ -16,7 +16,7 @@
         <label class="login-label"><b>Password</b></label>
         <input class="login-input" id="password" type="password" placeholder="Enter Password" name="password" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
       </div>
-      <button id="login-btn" class="login-button" type="submit">Login</button>
+      <a id="login-btn" class="login-button" type="submit">Login</a>
       <!--choose language -->
       <div class="login-div">
       <label id="english" class="language-check">🇬🇧
@@ -55,7 +55,7 @@
         }),
         success: function(response) {
           if (response.includes(true)) {
-            window.location.replace("src/mainmenu.php");
+            location.href = "src/mainmenu.php";
           } else {
 
             iziToast.error({
