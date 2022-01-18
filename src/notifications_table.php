@@ -96,7 +96,7 @@ session_start();
     												message: '<?php echo $lang['toilet_done'] ?>',
     											});
     											
-    												location.reload();
+    												
     											
     										} else {
     											iziToast.error({
