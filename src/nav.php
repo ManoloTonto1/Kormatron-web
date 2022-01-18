@@ -31,6 +31,12 @@
    
       
     });
+    $('#todo2').click(function (e) { 
+      
+      $( "#notif_table" ).load( "notifications_table.php" );
+  
+     
+   });
 
   });
   </script>

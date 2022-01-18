@@ -24,7 +24,7 @@ if(!isset($_SESSION['id'])){
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="open_nav();"><i class="fa fa-bars"></i>  Menu</button>
-  <a href="#" data-izimodal-open="#modal-notifications"class="icon"><i class="fas fa-clipboard-list"></i></a>
+  <a id="todo2" href="#" data-izimodal-open="#modal-notifications"class="icon"><i class="fas fa-clipboard-list"></i></a>
   <span class="w3-bar-item w3-right"><img class="logo"src="img/logo.png" alt="logo"></span>
 </div>
 
@@ -35,8 +35,8 @@ if(!isset($_SESSION['id'])){
 <div class="w3-main main" style="margin-top:43px;">
 
   <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+  <header class="w3-container" style="padding: 2em">
+    <h5 ><b><i class="fas fa-columns"></i> My Dashboard</b></h5>
   </header>
 <?php
 // include('settings.php');
