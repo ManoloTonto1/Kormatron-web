@@ -20,11 +20,25 @@ function get_toilets(){
   ";
   $result = $conn->query($query);
   $toilet = $result->fetch_all(MYSQLI_ASSOC);
+
+  
+  $last_id = 0;
+  for($i = 0; $i < count($toilet); $i++){
+    if($i>0){
+      if($toilet[$i]['id'] == $i - 1){
+        unset($toilet[$i]);
+      } 
+    }
+    
+    
+  }
+  
   return $toilet;
   
   
   $conn->close();
 
 }
+
 
 ?> 

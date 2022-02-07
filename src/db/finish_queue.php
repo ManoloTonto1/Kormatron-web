@@ -21,7 +21,7 @@ session_start();
     $query1 = "
     UPDATE toilet_log
     SET last_cleaned = '$time'
-    WHERE toilet_id='$id' AND worker_id= '$user_id' AND last_cleaned = '$old_time';
+    WHERE toilet_id='$id' AND worker_id= '$user_id' AND last_cleaned is NULL AND time='$old_time';
     ";
     $query2 = "
     UPDATE toilet

@@ -19,10 +19,10 @@ function get_queue()
 	}
 
 	$query = "
-		SELECT toilet.id, toilet.location,toilet.type,toilet.status,toilet_log.time
+		SELECT toilet.id, toilet.location,toilet.type,toilet.status,toilet_log.time,toilet_log.last_cleaned
 		FROM toilet
 		INNER JOIN toilet_log ON toilet.id=toilet_log.toilet_id
-		where toilet_log.worker_id = '$id' AND toilet.status='1';
+		where toilet_log.worker_id = '$id' AND toilet.status='1' AND last_cleaned is NULL;
 		";
 	$result = $conn->query($query);
 	$toilet = $result->fetch_all(MYSQLI_ASSOC);
@@ -49,7 +49,7 @@ if ($_SESSION['language'] == "nl") {
 			<th width="20%"><?php echo $lang['toilet_floor']; ?></th>
 			<th width="20%"><?php echo $lang['toilet_type']; ?></th>
 			<th width="20%"><?php echo $lang['toilet_time']; ?></th>
-			<th width="30%"><?php echo $lang['toilet_status']; ?></th>
+			<th width="30%"><?php echo $lang['toilet_last_cleaned']; ?></th>
 			<th width="10%"><?php echo $lang['toilet_mark_as_done']; ?></th>
 		</tr>
 	</thead>
@@ -68,7 +68,7 @@ if ($_SESSION['language'] == "nl") {
 					<td><?php echo change_floor_reload($i['location']); ?></td>
 					<td><?php echo change_type_reload($i['type']); ?></td>
 					<td><?php echo todate(strtotime($i['time'])); ?></td>
-					<td><?php echo change_status_reload($i['status']); ?></td>
+					<td><?php echo date("d-m-Y, g:i a",($i['last_cleaned'])); ?></td>
 					<td><button id="sex<?php echo $i['id'] ?>" class="product-module-icon-green"><i class="fas fa-check"></i></button></td>
 				</tr>
 				<div class="div1"></div>
@@ -98,10 +98,10 @@ if ($_SESSION['language'] == "nl") {
 											message: '<?php echo $lang['toilet_done'] ?>',
 										});
 
-										$('#sex<?php echo $i['id'] ?>').iziModal('close', {
+										$('#modal-notifications').iziModal('close', {
 											transition: 'bounceOutDown' // Here transitionOut is the same property.
 										});
-										$('#sex<?php echo $i['id'] ?>').iziModal('destroy');
+										
 
 
 									} else {

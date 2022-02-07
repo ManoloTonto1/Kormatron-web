@@ -1,15 +1,15 @@
 
 <?php session_start(); ?>
 <?php include('db/scripts.php') ?>
-<?php include('lang/translate.php') ?>
 <?php 
       if($_SESSION['language'] == "nl"){
-        include('lang/dutch.php'); 
-      }
-      else{
-        include('lang/english.php'); 
-      }
-      ?>
+		  include('lang/dutch.php'); 
+		}
+		else{
+			include('lang/english.php'); 
+		}
+		?>
+		<?php include('lang/translate.php') ?>
 <div id='toilets'>
 
 	<h3><?php echo $lang['toilets'] ?> </h3>

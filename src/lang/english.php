@@ -58,6 +58,7 @@ $lang = array(
     'toilet_mark_as_done' => 'Mark as done',
     'toilet_done' => 'Done!',
     'toilet_done_error' => 'Error!',
+    'toilet_last_cleaned' => 'Last cleaned',
 
 );
 ?>
